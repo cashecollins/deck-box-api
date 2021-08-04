@@ -1,4 +1,4 @@
-# deck-box-api
+# Summary
 MTG Deck Organizer
 
 # Local Database Setup
