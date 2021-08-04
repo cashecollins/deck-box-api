@@ -10,11 +10,15 @@ CREATE ROLE mtg_decks_admin LOGIN SUPERUSER PASSWORD 'admin';
 ```
 
 # Django Setup
-First Install all of the requirements
-```pip install -r requirements```
+First Install all of the requirements:
+```
+pip install -r requirements
+```
 
-Then migrate into the newly created database
-``` python manage.py migrate ```
+Then migrate into the newly created database:
+```
+python manage.py migrate
+```
 
 # Sync Cards into database
 Then Sync in the sets and cards into the database
