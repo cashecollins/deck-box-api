@@ -25,11 +25,12 @@ class CardSyncService:
         set_matrix = list(self.chunks(sets, 50))
         group_count = 0
         for sets in set_matrix:
-            threads = []
+            # threads = []
+            group_count += 1
             for set in sets:
-                # self.sync_cards_of_set(set.abbreviation)
-                threads.append(threading.Thread(target=self.sync_cards_of_set, args=(set.abbreviation,)))
-            map(self.execute_thread, threads)
+                self.sync_cards_of_set(set.abbreviation)
+                # threads.append(threading.Thread(target=self.sync_cards_of_set, args=(set.abbreviation,)))
+            # map(self.execute_thread, threads)
             print('Group {0}/{1}: finished'.format(group_count, len(set_matrix)))
         print('Finished Syncing Cards')
 
